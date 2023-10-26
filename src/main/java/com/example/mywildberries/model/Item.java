@@ -23,19 +23,10 @@ public class Item {
     @Column(name = "name")
     String name;
 
-    @Column(name = "price")
-    int price;
-
     @Column(name = "weight")
     float weight;
 
     @ManyToOne
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     Order order_owner;
-
-    public Item(String name, int price, int weight) {
-        this.name = name;
-        this.price = price;
-        this.weight = weight;
-    }
 }

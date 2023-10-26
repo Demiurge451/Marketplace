@@ -2,30 +2,34 @@ package com.example.mywildberries.model;
 
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import java.util.List;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Data
 @Entity
 @Table(name = "order")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@NoArgsConstructor
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    Integer id;
+    int id;
 
-    @OneToMany(mappedBy = "order_owner")
-    List<Item> items;
+    @Column
+    int weight;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    User owner;
+    public Order() throws IOException {
+
+    }
 
 }
