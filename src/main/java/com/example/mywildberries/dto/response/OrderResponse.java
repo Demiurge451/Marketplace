@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderResponse {
-
     int id;
-    List<ItemResponse> items;
+    String address_start;
+    String address_end;
 }

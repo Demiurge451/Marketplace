@@ -2,7 +2,8 @@ package com.example.mywildberries.service;
 
 import com.example.mywildberries.model.Order;
 import com.example.mywildberries.repository.OrderRepository;
-import com.example.mywildberries.repository.UserRepository;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class OrderService {
 
     OrderRepository orderRepository;
@@ -30,8 +32,8 @@ public class OrderService {
     }
 
     @Transactional
-    public void save(Order item) {
-        orderRepository.save(item);
+    public Order save(Order item) {
+        return orderRepository.save(item);
     }
 
     @Transactional
