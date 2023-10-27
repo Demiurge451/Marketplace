@@ -1,7 +1,6 @@
 package com.example.mywildberries.dto.request;
 
 
-import com.example.mywildberries.model.Item;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
