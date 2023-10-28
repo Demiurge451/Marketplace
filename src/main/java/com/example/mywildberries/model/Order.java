@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "order")
+@Table(name = "order_delivery")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Order {
     @Id
@@ -18,11 +18,11 @@ public class Order {
     int id;
 
     @Column(name = "weight")
-    float weight;
+    int weight;
 
-    @Column(name = "adress_start")
+    @Column(name = "address_start")
     String addressStart;
 
-    @Column(name = "adress_end")
+    @Column(name = "address_end")
     String addressEnd;
 }

@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderRequest {
-    String address_start;
-    String address_end;
+    int weight;
+    String addressStart;
+    String addressEnd;
 }

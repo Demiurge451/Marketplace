@@ -12,6 +12,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderResponse {
     int id;
-    String address_start;
-    String address_end;
+    int weight;
+    String addressStart;
+    String addressEnd;
 }
