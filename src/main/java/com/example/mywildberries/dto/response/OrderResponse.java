@@ -11,7 +11,10 @@ import java.util.List;
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class OrderResponse {
-    int id;
-    String address_start;
-    String address_end;
+    String addressStart;
+    String addressEnd;
+    float startLat;
+    float startLon;
+    float endLat;
+    float endLon;
 }

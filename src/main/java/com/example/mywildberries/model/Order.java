@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "order")
+@Table(name = "order_buy")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Order {
     @Id
@@ -25,4 +25,16 @@ public class Order {
 
     @Column(name = "adress_end")
     String addressEnd;
+
+    @Column(name = "start_lat")
+    float startLat;
+
+    @Column(name = "startLon")
+    float startLon;
+
+    @Column(name = "endLat")
+    float endLat;
+
+    @Column(name = "endLon")
+    float endLon;
 }
